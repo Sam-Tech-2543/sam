@@ -1,7 +1,3 @@
-/*
-* 	Owl Carousel Owl Demo Theme 
-*	v1.24
-*/
     #owl-demo .item{
         margin: 3px;
     }
@@ -33,7 +29,7 @@
 	left: -2%;
 	top:57%;
 }
-/* Clickable class fix problem with hover on touch devices */
+
 /* Use it for non-touch hover action */
 .owl-theme .owl-controls.clickable .owl-buttons div:hover{
 	filter: Alpha(Opacity=100);/*IE7 fix*/
@@ -120,10 +116,6 @@
 	min-height: 150px;
 	background: url(AjaxLoader.gif) no-repeat center center
 }
-/* 
- * 	Core Owl Carousel CSS File
- *	v1.24
- */
 
 /* clearfix */
 .owl-carousel .owl-wrapper:after {
