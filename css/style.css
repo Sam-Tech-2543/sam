@@ -1,9 +1,3 @@
-/*--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
---*/
 html, body{
     font-family: 'Open Sans', sans-serif;
     font-size: 100%;
@@ -2106,6 +2100,7 @@ body { font-family: sans-serif; }
 .css3 {width: 60%; background-color: #04AA6D;}
 .phplang {width: 55%; background-color: #04AA6D;}
 .java {width: 55%; background-color: #04AA6D;}
+.vb {width: 55%; background-color: #04AA6D;}
 .js {width: 50%; background-color: #04AA6D;}
 .flask {width: 75%; background-color: #04AA6D;}
 .android {width: 35%; background-color: #04AA6D;}
@@ -2228,13 +2223,13 @@ body { font-family: sans-serif; }
 
 /*Projects*/
 .projectcard {
-	width: 90%;                 /* Set width of cards */
+	width: 90%;
 	align-self: center;
-	border: 1px solid #1b242f;    /* Set up Border */
-	border-radius: 12px;           /* Slightly Curve edges */
-	overflow: hidden;             /* Fixes the corners */
-	display: flex;                /* Children use Flexbox */
-	flex-direction: column;       /* Rotate Axis */
+	border: 1px solid #1b242f;
+	border-radius: 12px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
 }
 
 .projectcard-header {
@@ -2255,14 +2250,14 @@ body { font-family: sans-serif; }
 	margin-right: 10px;
 	margin-top: 5px;
 	margin-bottom: 5px;
-  }
+}
 
-  .projectcard:hover{
+.projectcard:hover{
 	transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
-  }
+	box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
 
-/* Fonts for Footer*/
+/* Social Icons for Footer*/
 .fa {
 	padding: 20px;
 	font-size: 30px;
