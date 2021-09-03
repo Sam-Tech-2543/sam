@@ -845,17 +845,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
     </script>
 		
-	<script type="module">
-				// Import the functions you need from the SDKs you need
-				import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.1/firebase-app.js";
-				import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.0.1/firebase-database.js";
+     <script type="module">
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.1/firebase-app.js";
+import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.0.1/firebase-database.js";
 
 
-				// TODO: Add SDKs for Firebase products that you want to use
-				// https://firebase.google.com/docs/web/setup#available-libraries
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
-				// Your web app's Firebase configuration
-				const firebaseConfig = {
+// Your web app's Firebase configuration
+const firebaseConfig = {
     apiKey: "AIzaSyDQB2apQDnZea8vymX-ZZANR-h4WYmiUuE",
     authDomain: "resume1-c4a3b.firebaseapp.com",
     projectId: "resume1-c4a3b",
@@ -865,36 +865,35 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     measurementId: "G-F6SX18F4BG"
   };
 				
-				const app = initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
 
 
-				document.getElementById("contactform").addEventListener('submit', submitform);
-				function submitform(e) {
-					e.preventDefault();
-					console.log(123);
-					var name = getInputVal('name');
-					var email = getInputVal('email');
-					var mobile = getInputVal('mobile');
-					var msg = getInputVal('msg');
-					writeUserData(name, email, mobile, msg);
-					console.log(name, email, mobile, msg);
-				}
+	document.getElementById("contactform").addEventListener('submit', submitform);
+	function submitform(e) {
+		e.preventDefault();
+		var name = getInputVal('name');
+		var email = getInputVal('email');
+		var mobile = getInputVal('mobile');
+		var msg = getInputVal('msg');
+		writeUserData(name, email, mobile, msg);
+		console.log(name, email, mobile, msg);
+	}
 
-				function getInputVal(id) {
-					return document.getElementById(id).value;
-				}
+	function getInputVal(id) {
+		return document.getElementById(id).value;
+	}
 
-				function writeUserData(name, email, mobile, msg) {
-					const db = getDatabase();
-					set(ref(db, 'users/' + name), {
-						name: name,
-						email: email,
-						mobile: mobile,
-						msg: msg
-					});
-				}
+	function writeUserData(name, email, mobile, msg) {
+		const db = getDatabase();
+		set(ref(db, 'users/' + name), {
+			name: name,
+			email: email,
+			mobile: mobile,
+			msg: msg
+		});
+	}
 
-			</script>	
+</script>	
 
 	</body>
 </html>
