@@ -12,10 +12,9 @@
  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
  <meta name="keywords" content="Preface Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
-<!-- webfonts -->
+<!-- devicons -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.13.0/devicon.min.css">
-<!-- webfonts -->
-
+<!-- devicons -->
 <!--For Gallery-->
 	<link href='https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -31,6 +30,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				});
 			});
 		</script>
+
+<!-- For Notification -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
+<!-- //For Notification -->
 
 </head>
 	<body id="mybody">
@@ -794,7 +798,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<form id="contactform">
 					<input type="text" id="name" name="Name" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
 					<input type="email" id="email" name="Email" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
-					<input type="text" id="mobile" name="Mobile number" value="Mobile number" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Mobile number';}" required="">
 					<textarea name="Message..." id="msg" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required="">Message...</textarea>
 					<input type="submit" value="Send">
 					
@@ -817,18 +820,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <a href="#home" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 	<!--start-smooth-scrolling-->
 						<script type="text/javascript">
-									$(document).ready(function() {
-										/*
-										var defaults = {
-								  			containerID: 'toTop', // fading element id
-											containerHoverID: 'toTopHover', // fading element hover id
-											scrollSpeed: 1200,
-											easingType: 'linear' 
-								 		};
-										*/
-										
-										$().UItoTop({ easingType: 'easeOutQuart' });
-										
+									$(document).ready(function() {										
+										$().UItoTop({ easingType: 'easeOutQuart' });									
 									});
 								</script>
 								<!--end-smooth-scrolling-->
@@ -846,15 +839,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </script>
 		
      <script type="module">
-// Import the functions you need from the SDKs you need
+
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.1/firebase-app.js";
 import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.0.1/firebase-database.js";
 
-
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
 const firebaseConfig = {
     apiKey: "AIzaSyDQB2apQDnZea8vymX-ZZANR-h4WYmiUuE",
     authDomain: "resume1-c4a3b.firebaseapp.com",
@@ -873,25 +861,34 @@ const app = initializeApp(firebaseConfig);
 		e.preventDefault();
 		var name = getInputVal('name');
 		var email = getInputVal('email');
-		var mobile = getInputVal('mobile');
 		var msg = getInputVal('msg');
-		writeUserData(name, email, mobile, msg);
-		console.log(name, email, mobile, msg);
+		writeUserData(name, email, msg);
+		console.log(name, email, msg);
 	}
 
 	function getInputVal(id) {
 		return document.getElementById(id).value;
 	}
 
-	function writeUserData(name, email, mobile, msg) {
+	function popupop(){
+		Swal.fire(
+			'Thanks a lot!',
+			'Your Review has been saved.',
+			'success'
+		)
+	}
+
+	function writeUserData(name, email, msg) {
 		const db = getDatabase();
 		set(ref(db, 'users/' + name), {
 			name: name,
 			email: email,
-			mobile: mobile,
 			msg: msg
 		});
+		popupop();
 	}
+
+
 
 </script>	
 
