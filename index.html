@@ -35,7 +35,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
 <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
 <!-- //For Notification -->
-
+<link rel="stylesheet" href="css/aos.css"/>
 </head>
 	<body id="mybody">
 		<!-- Page Loader -->
@@ -624,25 +624,29 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 		<div class="row" style="margin-left: 15px; margin-right: 15px;" style="justify-content: center;">
 			<div class="col-md-6">
-				<div class="projectcard" style="margin-top: 20px;">
-					<div class="projectcard-header">Sort-Files</div>
-					<div class="card-main">
-					  <div class="main-projectdescription">A folder can have many different types of files in it.
-						Manually adjusting all the files is too tedious and people like me just want the things to be automated.
-						So I have made a program that just sorts all the files.
-						<br><br> Click! 👉 <a href="https://github.com/Sam-Tech-2543/sort-files" target="_blank">Sort-Files Program</a></div>
-					</div>
-				  </div>
+				<div data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-delay="100" data-aos-duration="1300">
+					<div class="projectcard" style="margin-top: 20px;">
+						<div class="projectcard-header">Sort-Files</div>
+						<div class="card-main">
+						  <div class="main-projectdescription">A folder can have many different types of files in it.
+							Manually adjusting all the files is too tedious and people like me just want the things to be automated.
+							So I have made a program that just sorts all the files.
+							<br><br> Click! 👉 <a href="https://github.com/Sam-Tech-2543/sort-files" target="_blank">Sort-Files Program</a></div>
+						</div>
+					  </div>
+				</div>
 			</div>
 			<div class="col-md-6">
-				<div class="projectcard" style="margin-top: 20px;">
-					<div class="projectcard-header">Calculator</div>
-					<div class="card-main">
-						  <div class="main-projectdescription">A Standard Calculator made with Python! It does all the normal Mathematical Calculations and also supports Brackets in the equation.
-							<br><br> Click! 👉 <a href="https://github.com/Sam-Tech-2543/Calculator/" target="_blank">Calculator Program</a>
+				<div data-aos="fade-left" data-aos-anchor-placement="top-bottom" data-aos-delay="100" data-aos-duration="1300">
+					<div class="projectcard" style="margin-top: 20px;">
+						<div class="projectcard-header">Calculator</div>
+						<div class="card-main">
+							  <div class="main-projectdescription">A Standard Calculator made with Python! It does all the normal Mathematical Calculations and also supports Brackets in the equation.
+								<br><br> Click! 👉 <a href="https://github.com/Sam-Tech-2543/Calculator/" target="_blank">Calculator Program</a>
+							</div>
 						</div>
 					</div>
-				  </div>
+				</div>
 			</div>
 		</div>
 		<br>  <br>
@@ -892,9 +896,12 @@ const app = initializeApp(firebaseConfig);
 		document.getElementById('msg').value = 'Message...';
 	}
 
+	</script>	
 
+	<script src="js/aos.js"></script>
+	<script>
+	AOS.init();
+	</script>
 
-</script>	
-
-</body>
+	</body>
 </html>
