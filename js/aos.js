@@ -350,7 +350,6 @@
 								u += s.offsetHeight / 2;
 								break;
 							case "bottom-bottom":
-								u += s.offsetHeight - (s.offsetHeight*1.5);
 								break;
 							case "top-center":
 								u += o / 2;
