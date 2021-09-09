@@ -344,7 +344,7 @@
 						var u = Z(s).top - o;
 						switch (c) {
 							case "top-bottom":
-                                				u += s.offsetHeight - (s.offsetHeight*2.8);
+                                				u += s.offsetHeight - (s.offsetHeight*2);
 								break;
 							case "center-bottom":
 								u += s.offsetHeight / 2;
